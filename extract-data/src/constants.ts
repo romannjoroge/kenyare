@@ -8,3 +8,23 @@ Please identify the names of the files and return them as an array of objects in
     {{ "claims_statements": "file_name" }},
     {{ "treaty_files": "file_name" }}
 ]`;
+export const COLUMN_NAMES_PROMPT=`The following text contains the headers of the columns in an insurance dataset. Please identify the relevant columns based on the criteria below:
+
+    - Amount Paid and any subheadings under it. Do not include any limits.
+    - Start date of the cover.
+    - End date of the cover.
+    - Date the claim was filled / created
+    - Date the claim was paid/approved.
+    - Policy holder ID.
+    - Heading that denotes the treaty or benefits limit and any subheadings under it.
+
+    Return the results as an array of objects in the following format:
+    [
+    { "amount": ("heading", "subHeading") }} or {{ "amount": "heading" },
+    { "start_date": "start_date" },
+    { "end_date": "end_date" },
+    {"claim_date": "claim_date"},
+    { "approval_date": "approval_date" },
+    { "policy_holder_id": "policy_holder_id" },
+    { "benefit_limit": ("heading", "subHeading") }} or {{ "benefit_limit": "heading" }
+]`;
