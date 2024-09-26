@@ -55,5 +55,5 @@ class Reader:
             imageText += text
             
         return text
-reader = Reader("data/BICOR-MEDICAL QS-3RD QTR 2020-  KENYA RE- NAIROBI.PDF")
-print(reader.readImage())
+# reader = Reader("data/BICOR-MEDICAL QS-3RD QTR 2020-  KENYA RE- NAIROBI.PDF")
+# print(reader.readImage())
